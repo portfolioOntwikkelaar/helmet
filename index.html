@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>color project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="colors">
+    <span onclick="changeColor('linear-gradient(to right, #73c8a9, #373b44)')" style="--clr:linear-gradient(to right, #73c8a9, #373b44);"></span>
+    <span onclick="changeColor('linear-gradient(to right, #dbe6f6, #c5796d)')" style="--clr:linear-gradient(to right, #dbe6f6, #c5796d);"></span>
+    <span onclick="changeColor('linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9)')" style="--clr:linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9);"></span>
+    <span onclick="changeColor('linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99)')" style="--clr:linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);"></span>
+    <span onclick="changeColor('linear-gradient(to right, #1e9600, #fff200, #ff0000)')" style="--clr:linear-gradient(to right, #1e9600, #fff200, #ff0000);"></span>
+
+    <span onclick="changeColor('linear-gradient(to right, #40e0d0, #ff8c00, #ff0080)')" style="--clr:linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);"></span>
+  </div>
+  <div class="box"></div>
+  <script>
+    let box = document.querySelector('.box');
+    function changeColor(color) {
+      box.style.background = color;
+      document.querySelectorAll('span').forEach(function(item){
+        item.classList.remove('active')
+      });
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
